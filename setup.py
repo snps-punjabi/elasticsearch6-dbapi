@@ -33,8 +33,7 @@ setup(
     author="Preset Inc.",
     author_email="daniel@preset.io",
     url="http://preset.io",
-    download_url="https://github.com/preset-io/elasticsearch-dbapi/releases/tag/"
-    + VERSION,
+    download_url="https://github.com/snps-punjabi/elasticsearch6-dbapi/releases/tag/v0.1",
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
