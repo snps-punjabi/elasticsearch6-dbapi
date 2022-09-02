@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from es.exceptions import DatabaseError
-from es.tests.fixtures.fixtures import data1_columns, flights_columns
+from es.tests.fixtures.fixtures import flights_columns
 from sqlalchemy import func, inspect, select
 from sqlalchemy.engine import create_engine
 from sqlalchemy.engine.reflection import Inspector
