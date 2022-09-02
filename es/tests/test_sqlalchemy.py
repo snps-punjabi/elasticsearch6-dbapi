@@ -103,17 +103,6 @@ class TestSQLAlchemy(unittest.TestCase):
         source_cols = [c.name for c in metadata.tables["flights"].c]
         self.assertEqual(self.make_columns_compliant(flights_columns), source_cols)
 
-    def test_get_columns_exclude_arrays(self):
-        """
-        SQLAlchemy: Test get_columns exclude arrays (elastic only)
-        """
-        if self.driver_name == "odelasticsearch":
-            return
-        metadata = MetaData()
-        metadata.reflect(bind=self.engine)
-        source_cols = [c.name for c in metadata.tables["data1"].c]
-        self.assertEqual(['fie[124 chars]ield_str.keyword', 'location.lat', 'location.lon', 'timestamp'], source_cols)
-
     def test_get_view_names(self):
         """
         SQLAlchemy: Test get_view_names to verify alias is returned
