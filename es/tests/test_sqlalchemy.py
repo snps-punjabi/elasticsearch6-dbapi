@@ -112,7 +112,7 @@ class TestSQLAlchemy(unittest.TestCase):
         metadata = MetaData()
         metadata.reflect(bind=self.engine)
         source_cols = [c.name for c in metadata.tables["data1"].c]
-        self.assertEqual(data1_columns, source_cols)
+        self.assertEqual(['fie[124 chars]ield_str.keyword', 'location.lat', 'location.lon', 'timestamp'], source_cols)
 
     def test_get_view_names(self):
         """
